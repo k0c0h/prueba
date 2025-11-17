@@ -4,7 +4,7 @@ $sql = "SELECT * FROM builds";
 $builds = []; 
 
 $stmt = $pdo->query($sql);
-$materias = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$builds = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="es">
