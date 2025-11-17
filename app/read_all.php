@@ -1,7 +1,8 @@
 <?php
 require_once '../conexion/db.php';
+$sql = "SELECT * FROM builds";
+$builds = []; 
 
-$sql = "SELECT id, build_id, color, price FROM builds ORDER BY id DESC";
 $stmt = $pdo->query($sql);
 $materias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -10,22 +11,11 @@ $materias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
 <meta charset="UTF-8">
 <title>Read</title>
-<link rel="stylesheet" href="../public/lib/bootstrap-5.3.5-dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<style>
-    body {
-        background-color: #f8f9fa;
-    }
-    .table-container {
-        margin-top: 40px;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
-    }
-</style>
+
 </head>
 <body>
 
@@ -63,8 +53,7 @@ $materias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-</script>
 </body>
 </html>
